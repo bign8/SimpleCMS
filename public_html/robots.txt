@@ -1,0 +1,16 @@
+# robots.txt for http://sleepdiag.com/
+
+User-agent: *
+Disallow: /edit.php
+Disallow: /handler.php
+Disallow: /index.htm
+Disallow: /index.html
+Disallow: /user.php
+Disallow: /adminD/
+Disallow: /css/
+Disallow: /dynamic/
+Disallow: /images/
+Disallow: /imgs/
+Disallow: /old/
+Disallow: /products/
+Disallow: /upload/

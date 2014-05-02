@@ -1,0 +1,14 @@
+#ErrorDocument 404 /404
+DirectoryIndex /handler.php # does this work?
+
+<IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteBase /
+
+        RewriteRule ^img - [L,NC]
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule . /handler.php [L]
+</IfModule>
+
+Options -Indexes

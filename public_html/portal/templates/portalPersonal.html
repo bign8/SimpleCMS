@@ -1,0 +1,170 @@
+<script type="text/javascript">
+	var zipRegEx = /^[0-9]{5}-[0-9]{4}$/;
+	var ssnRegEx = /^[0-9]{3}-[0-9]{2}-[0-9]{4}$/;
+	var dobRegEx = /^[0-9]{2}-[0-9]{2}-[0-9]{4}$/;
+	var phoneRegEx = /^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$/;
+
+	$(document).ready(function(){
+		$('#dob').datepicker({
+			dateFormat: 'mm-dd-yy'
+		});
+
+		$('#frmPerInfo').validate({
+			rules: {
+				fName: { required: true },
+				lName: { required: true },
+				address1: { required: true },
+				city: { required: true },
+				state: { required: true },
+				zipCode: { required: true, zipCode: true },
+				dob: { required: true, dob: true },
+				ssn: { required: true, ssn: true },
+				phone: { required: true, phone: true }
+			},
+			messages: {
+				fName: { required: "First Name is Required" },
+				lName: { required: "Last Name is Required" },
+				address1: { required: "Street Address is Required" },
+				city: { required: "City is Required" },
+				state: { required: "State is Required" },
+				zipCode: { required: "Zip Code is Required" },
+				dob: { required: "Birth Date is Required" },
+				ssn: { required: "Social Security Number is Required" },
+				phone: { required: "Phone is Required" }
+			},
+			submitHandler: function(form){
+				var ph = $('#phone').val().substr(1, 3) + $('#phone').val().substr(6, 3) + $('#phone').val().substr(10, 4);
+				var dataStr = "action=updateClient&fName=" + encodeURIComponent($('#fName').val()) + "&mName=" + encodeURIComponent($('#mName').val()) + "&lName=" + encodeURIComponent($('#lName').val());
+				dataStr += "&add1=" + encodeURIComponent($('#address1').val()) + "&add2=" + encodeURIComponent($('#address2').val()) + "&city=" + encodeURIComponent($('#city').val());
+				dataStr += "&state=" + encodeURIComponent($('#state').val()) + "&zip=" + encodeURIComponent($('#zipCode').val()) + "&dob=" + encodeURIComponent($('#dob').val());
+				dataStr += "&ss=" + encodeURIComponent($('#ssn').val()) + "&phone=" + encodeURIComponent(ph) + "&custID=" + ;
+				$.ajax({
+					type: 'post',
+					url: '',
+					success: function(data){
+						alert(data);
+					}
+				})
+				alert("Form ready to submit");
+			}
+		});
+	});
+	$.validator().addMethod("zipCode", function(value, element){
+		return this.optional(element) || zipRegEx.test(value);
+	}, "Valid Zip Code is Required");
+	$.validator().addMethod("ssn", function(value, element){
+		return this.optional(element) || ssnRegEx.text(value);
+	}, "Valid Social Security Number is Required");
+	$.validator().addMethod("dob", function(value, element){
+		var tmpMonth = parseFloat(value.substr(0, 2));
+		var tmpDate = parseFloat(value.substr(3, 2));
+		var tmpYear = parseFloat(value.substr(6, 4));
+
+		if(tmpMonth < 1 || tmpMonth > 12){
+			return false;
+		} else {
+			switch(tmpMonth){
+				case 1:
+				case 3:
+				case 5:
+				case 7:
+				case 8:
+				case 10:
+				case 12:
+					if(tmpDate > 31 || tmpDate < 1){
+						return false;
+					}
+					break;
+				case 4:
+				case 6:
+				case 9:
+				case 11:
+					if(tmpDate > 30 || tmpDate < 1){
+						return false;
+					}
+					break;
+				case 2:
+					numDays = chkLeapYr(tmpYear);
+					if(tmpDate > chkLeapYr(tmpYear) || tmpDate < 1){
+						return false;
+					}
+					break;
+				default:
+					return false;
+			}
+			if(tmpYear <= 0){
+				return false;
+			} else {
+				return true;
+			}
+		}
+		
+	}, "Valid Birth Date is Required");
+	$.validator().addMethod("phone", function(value, element){
+
+	}, "Valid Phone is Required");
+	function chkLeapYr(yr){
+		if(new Date(yr, 1, 29).getMonth == 1){
+			return 29;
+		} else {
+			return 28;
+		}
+	}
+</script>
+<style type="text/css">
+	ui-datepicker { font-size: .70em; }
+</style>
+<h4>Personal Information</h4>
+<div id="divPerInfo" style="width: 400px; float: left;" ng-controller="PersonCtrl">
+	<form id="frmPerInfo" action="" method="post">
+		<table border="0" cellpadding="3" cellspacing="0" style="width: 100%;">
+			<tbody>
+				<tr>
+					<td><label for="fName">First Name:</label></td>
+					<td><label for="mName">Middle:</label></td>
+					<td><label for="lName">Last:</td>
+				</tr>
+				<tr>
+					<td><input type="text" id="fName" name="fName" value="" ng-class="{noEdit: !personalEdit}" ng-disabled="!personalEdit" ng-model="userDetails.fName"/></td>
+					<td><input type="text" id="mName" name="mName" value="" ng-class="{noEdit: !personalEdit}" ng-disabled="!personalEdit" ng-model="userDetails.mName"/></td>
+					<td><input type="text" id="lName" name="lName" value="" ng-class="{noEdit: !personalEdit}" ng-disabled="!personalEdit" ng-model="userDetails.lName"/></td>
+				</tr>
+				<tr>
+					<td colspan="3"><label for="address1">Address:</label></td>
+				</tr>
+				<tr>
+					<td colspan="3"><input type="text" id="address1" name="address1" value="" ng-class="{noEdit: !personalEdit}" ng-disabled="!personalEdit" ng-model="userDetails.add1" style="width: 98%;"/></td>
+				</tr>
+				<tr>
+					<td colspan="3"><input type="text" id="address2" name="address2" value="" ng-class="{noEdit: !personalEdit}" ng-disabled="!personalEdit" ng-model="userDetails.add2" style="width: 98%;"/></td>
+				</tr>
+				<tr>
+					<td><label for="city">City:</label></td>
+					<td><label for="state">State:</label></td>
+					<td><label for="zipCode">Zip Code:</label></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="city" name="city" value="" ng-class="{noEdit: !personalEdit}" ng-disabled="!personalEdit" ng-model="userDetails.city"/></td>
+					<td><input type="text" id="state" name="state" value="" ng-class="{noEdit: !personalEdit}" ng-disabled="!personalEdit" ng-model="userDetails.state"/></td>
+					<td><input type="text" id="zipCode" name="zipCode" value="" ng-class="{noEdit: !personalEdit}" ng-disabled="!personalEdit" ng-model="userDetails.zip" onfocus="removeFormat(this)" onblur="formatZip(this)" onkeyup="checkNum(this)" maxlength="9"/></td>
+				</tr>
+				<tr>
+					<td><label for="dob">Date of Birth:</label></td>
+					<td><label for="ssn">SSN</label></td>
+					<td><label for="phone">Phone:</label></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="dob" name="dob" value="" ng-class="{noEdit: !personalEdit}" ng-disabled="!personalEdit" ng-model="userDetails.dob"/></td>
+					<td><input type="text" id="ssn" name="ssn" value="" ng-class="{noEdit: !personalEdit}" ng-disabled="!personalEdit" ng-model="userDetails.ss" onfocus="removeFormat(this)" onblur="formatSSN(this)" onkeyup="checkNum(this)" maxlength="9"/></td>
+					<td><input type="text" id="phone" name="phone" value="" ng-class="{noEdit: !personalEdit}" ng-disabled="!personalEdit" ng-model="userDetails.phone" onfocus="removeFormat(this)" onblur="formatPhone(this)" onkeyup="checkNum(this)" maxlength="10"/></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<button type="button" ng-click="setPersonalEdit()" ng-show="!personalEdit">Edit Personal Information</button>
+						<button type="submit" ng-show="personalEdit">Update Personal Information</button>&nbsp;&nbsp;<button type="button" ng-show="personalEdit" ng-click="cancelPersonalEdit()">Cancel</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</div>

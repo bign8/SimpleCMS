@@ -1,0 +1,70 @@
+@import url('//fonts.googleapis.com/css?family=Cookie');
+@import url('//fonts.googleapis.com/css?family=Allura');
+.ui-dialog{
+	font-size: .85em;
+}
+.noclose .ui-dialog-titlebar-close{
+    display: none;
+}
+.noEdit{
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	border-bottom: solid thin black;
+	color: #000;
+}
+div#divNav a{
+	display: block;
+	padding: 3px;
+}
+h3{
+	padding: 0;
+	margin: 5px;
+	color: #0c371d;
+	font-family: Allura;
+	font-size: 24pt;
+}
+h4{
+	padding: 0;
+	margin: 5px;
+	color: #0c371d;
+	font-family: Allura;
+	font-size: 18pt;
+}
+div#portalNav{
+	width: 200px;
+	float: left;
+	margin-right: 5px;
+	margin-left: 30px;
+	border: solid thin #0c371d;
+	border-radius: 5px;
+	box-shadow: 5px 5px 3px #717f81;
+	-moz-box-shadow: 5px 5px 3px #717f81;
+	-webkit-box-shadow: 5px 5px 3px #717f81;
+	min-height: 100px;
+}
+div#portalContent{
+	width: 705px;
+	min-height: 200px;
+	float: right;
+	margin-right: 30px;
+}
+div#sd_pageWrap{
+	width: 725px;
+	min-height: 100px;
+}
+/* Input Fields */
+#frmLogin input[type=text] input[type=password]{
+	width: 100%;
+}
+/* Classes */
+.boxShadow{
+	border: solid thin #0c371d;
+	border-radius: 5px;
+	box-shadow: 5px 5px 3px #717f81;
+	-moz-box-shadow: 5px 5px 3px #717f81;
+	-webkit-box-shadow: 5px 5px 3px #717f81;
+}
+.error{
+	color: red;
+}

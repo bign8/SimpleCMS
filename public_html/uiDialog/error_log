@@ -1,0 +1,52 @@
+[16-Apr-2014 23:30:28 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[16-Apr-2014 23:49:38 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[16-Apr-2014 23:50:28 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[16-Apr-2014 23:50:46 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[16-Apr-2014 23:50:50 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[16-Apr-2014 23:50:54 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[16-Apr-2014 23:50:58 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[16-Apr-2014 23:51:06 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[16-Apr-2014 23:51:11 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[16-Apr-2014 23:51:21 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[16-Apr-2014 23:52:08 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[16-Apr-2014 23:52:12 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[17-Apr-2014 19:16:59 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[17-Apr-2014 19:17:11 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[17-Apr-2014 19:17:14 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[17-Apr-2014 19:44:35 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 14:55:41 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 14:55:49 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 14:55:56 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 15:50:11 America/New_York] PHP Parse error:  syntax error, unexpected '}' in /home/sleepdia/public_html/uiDialog/uiDialogUtil.php on line 12
+[18-Apr-2014 15:50:41 America/New_York] PHP Notice:  Undefined variable: dbConnect in /home/sleepdia/public_html/uiDialog/uiDialogUtil.php on line 33
+[18-Apr-2014 15:50:41 America/New_York] PHP Fatal error:  Function name must be a string in /home/sleepdia/public_html/uiDialog/uiDialogUtil.php on line 33
+[18-Apr-2014 15:50:44 America/New_York] PHP Notice:  Undefined variable: dbConnect in /home/sleepdia/public_html/uiDialog/uiDialogUtil.php on line 33
+[18-Apr-2014 15:50:44 America/New_York] PHP Fatal error:  Function name must be a string in /home/sleepdia/public_html/uiDialog/uiDialogUtil.php on line 33
+[18-Apr-2014 15:51:05 America/New_York] PHP Notice:  Undefined variable: dbConnect in /home/sleepdia/public_html/uiDialog/uiDialogUtil.php on line 33
+[18-Apr-2014 15:51:05 America/New_York] PHP Fatal error:  Function name must be a string in /home/sleepdia/public_html/uiDialog/uiDialogUtil.php on line 33
+[18-Apr-2014 15:52:42 America/New_York] PHP Notice:  Undefined variable: dbConnect in /home/sleepdia/public_html/uiDialog/uiDialogUtil.php on line 33
+[18-Apr-2014 15:52:42 America/New_York] PHP Fatal error:  Function name must be a string in /home/sleepdia/public_html/uiDialog/uiDialogUtil.php on line 33
+[18-Apr-2014 15:53:36 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 15:53:42 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 15:54:42 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 15:54:50 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 15:54:55 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 15:54:59 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 15:55:52 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 15:56:01 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 15:56:08 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 15:57:34 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 15:57:37 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 16:24:48 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 21:03:42 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 21:03:46 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 21:22:33 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[18-Apr-2014 21:22:36 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[20-Apr-2014 00:29:56 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[20-Apr-2014 00:30:00 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[20-Apr-2014 00:30:06 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[24-Apr-2014 20:26:22 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[24-Apr-2014 20:33:50 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[24-Apr-2014 20:34:02 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[29-Apr-2014 16:26:01 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
+[01-May-2014 11:35:09 America/New_York] PHP Notice:  Undefined offset: 0 in /home/sleepdia/libinc/db.php on line 50
