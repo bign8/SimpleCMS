@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 class PageClass {
 	public $pageVals	= array();
 	public $content		= array();
@@ -17,31 +20,16 @@ class PageClass {
 		$this->DBH = new myPDO();
 	}
 	
-	public function Run() {
-		// print_r($_SERVER);
-		// return 'done';
+	public function Run( ) {
+		$page = empty($_SERVER['QUERY_STRING']) ? '/index' : $_SERVER['QUERY_STRING'] ;
 
-		$page = '/';
-		if (isset($_SERVER['REQUEST_URI'])) {
-			$page = $_SERVER['REQUEST_URI'];
-		}
-		// $page = ?$_SERVER['REDIRECT_URL']:'/'; // $_SERVER['REDIRECT_URL']; // or 'SCRIPT_URL'
-		//$page = substr( $page, 0, strrpos( $page, "?"));
-
-		if(strrchr($page, "/") == "/") {
+		if ( strrchr($page, '/') == '/' ) {
 			$page .= 'index'; // add index to each directory
-		} else {
-			if (config::Extension != '') {
-				$page = substr( $page, 0, strrpos( $page, '.'.config::Extension ) ); // enforce extensions
-			}
+		} elseif (config::Extension != '') {
+			$page = substr( $page, 0, strrpos( $page, '.'.config::Extension ) ); // enforce extensions
 		}
-		// echo 'Page: ', $page, '<pre>', print_r($_SERVER, true), '</pre>';
-		//asdf
-		// return $page;
 
-		self::getPage($page);
-		
-		// return 'after getPage';
+		$this->getPage($page);
 
 		$smarty	= new SmartyConfig();
 		$tpl	= $smarty->createTemplate('runner.tpl');
@@ -67,7 +55,7 @@ class PageClass {
 		$tpl->display();
 	}
 	
-	private function getPage($url) {
+	private function getPage( $url ) {
 		$edit = (isset($_REQUEST['mode']) && $_REQUEST['mode'] == 'edit');
 
 		$pageSTH = $this->DBH->prepare("SELECT * FROM `web_v_page` WHERE `path`= ? ;");

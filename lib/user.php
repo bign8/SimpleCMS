@@ -1,6 +1,6 @@
 <?php
 
-require_once("site_inc.php");
+require_once("index.php");
 
 class User {
 	const LOGIN_SUCCESS			= "<h1 class='yay'>Success</h1><p>You will be redirected in 4 seconds.</p>",

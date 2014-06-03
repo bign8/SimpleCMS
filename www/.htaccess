@@ -8,7 +8,7 @@ DirectoryIndex /handler.php # does this work?
         RewriteRule ^img - [L,NC]
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteRule . /handler.php [L]
+        RewriteRule ^(.*)$ /handler.php?/$1 [L]
 </IfModule>
 
 Options -Indexes

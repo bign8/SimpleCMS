@@ -1,6 +1,6 @@
 <?php
 
-require_once('../libinc/site_inc.php');
+require_once('../lib/index.php');
 
 if (isset($_REQUEST['action'])) {
 	switch ($_REQUEST['action']) {
@@ -12,6 +12,6 @@ if (isset($_REQUEST['action'])) {
 }
 
 $page = new PageClass();
-echo $page->Run();
+echo $page->Run( );
 
-// echo 'finished';
+echo 'fin';
